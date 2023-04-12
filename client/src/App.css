@@ -1,0 +1,697 @@
+/* general */
+
+.shoppingCard{
+    border: 1px rgba(0, 0, 0, 0.135) solid;
+    width: fit-content;
+    text-align: center;
+    margin: 10px;
+}
+.shoppingCard>img{
+    width: 250px;
+    height: 250px;
+object-fit: cover;
+}
+.shoppingCard>div{
+    width: 250px;
+}
+.shoppingCard>div>Button{
+    margin: 10px;
+}
+
+.landingBackground{
+width: 100%;
+height: auto;
+position: absolute;
+}
+
+.landingNavbar{
+   background-color: white;
+    height: fit-content;
+    width: 100%;
+    position: fixed;
+    z-index: 30;
+    display: flex;
+}
+.landingNavbar>strong{
+   
+    width: fit-content;
+    height: 100%;
+    padding: 13px;
+}
+.right{
+    margin-left: auto;
+}
+.navBarLinks{
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    color: black;
+    
+   
+}
+.navBarLinks:hover{
+    
+    color:#024bb9;
+}
+
+.accountDropdownMenu{
+    display: none;
+    background-color: white;
+    border-radius: 2px;
+}
+.accountDropdown:hover{
+    cursor: pointer;
+}
+.accountDropdown:hover .accountDropdownMenu{
+    display: block;
+}
+.accountDropdownMenu>div{
+    padding: 5px;
+    border: 1px #024bb9 solid;
+    border-radius: 5px;
+    margin-bottom: 2px
+}
+.accountDropdownMenu>div:hover {
+    background-color: #024bb9;
+    color: white;
+}
+.accountDropdownMenuLinks{
+    text-decoration: none;
+}
+.accountDropdownMenu>div:hover .accountDropdownMenuLinks{
+    color: white;
+}
+
+
+
+.landingBody{
+    display: flex;
+    width: 100%;
+    height: 400px;
+    background-color: rgb(45, 97, 84);
+    text-align: center;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+}
+.landingBodyItem{
+    width: 50%;
+}
+.landingBodyBtn{
+color: white;
+background-color: rgb(25, 53, 46);
+border: none;
+}
+.landingBodyBtn:hover{
+    background-color: white;
+    color: rgb(25, 53, 46);
+}
+
+.divWithCenteredItems{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.carousel{
+    width: 100%;
+    margin: auto;
+}
+
+.homeImage{
+    min-height: 250px;
+    min-width: 250px;
+    width: 46vw;
+    height: 46vw;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    color: white;
+}
+
+.loading{
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 31;
+     width: 100vw; 
+    height: 100vh; 
+    background-color: rgba(0, 0, 0, 0.936);
+}
+.loading>div{
+    text-align: center;
+
+}
+.dot{
+    background-color: rgb(36, 184, 31);
+    height: 25px;
+    width:25px;
+    border-radius: 50%;
+    display: inline-block ;
+    animation-name: loading;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    
+}
+.dot:nth-child(1){
+    animation-delay: 0.5s;
+    background-color: red;
+}
+.dot:nth-child(2){
+    animation-delay: 1s;
+    background-color: #3a78d6 ;
+}
+.dot:nth-child(3){
+    animation-delay: 1.5s;
+    background-color: yellow ;
+    
+}
+.dot:nth-child(4){
+    animation-delay: 2s;
+    background-color: #fff;
+}
+@keyframes loading{
+  
+    50%{
+        transform: translate(10px,10px);   
+    }
+    100%{
+        transform: translate(0px,0px);
+    } 
+}
+
+
+
+/* cart */
+.cart{
+    width: 70vw;
+    margin-top: 100px;
+    height: 100px;
+    text-align: center;
+}
+.cartComponent{
+    width: 100%;
+    background-color: rgb(250, 250, 250);
+    margin-bottom: 20px;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.cartImage{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+.cartHeading{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
+}
+.cartItemsHeading{
+display: flex;
+justify-content: space-between;
+}
+.cartItems{
+    border-top: 1px rgb(148, 148, 148) solid;
+    padding-top: 10px;
+}
+.toggleCartAmount>span{
+margin: 2px;
+padding: 5px;
+background-color: #1b68db;
+color: white;
+cursor: pointer;
+}
+/* checkout */
+.checkout{
+    position: fixed;
+    right: 0;
+    top: 100px;
+    width: 25%;
+    background-color: rgb(46, 46, 46);
+    color: white;
+    text-align: center;
+    
+}
+.checkout>div{
+    display: flex;
+    justify-content: space-between;
+    width: 75%;
+    max-width: 200px;
+    margin: auto;
+margin-bottom: 20px;
+}
+.ordersItemsHeading{
+    width: 800px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px black solid;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    /* background-color: #024bb9; */
+}
+.ordersItemsHeading>strong{
+    display: inline;
+}
+.ordersItems{
+    width: 800px;
+    text-align: center;
+}
+
+.orderComponent{
+    background-color: #024bb910;
+}
+
+
+
+.listings{
+    padding-top: 50px;
+   
+}
+
+
+
+
+
+
+
+
+/* vendorsPortal */
+
+.vendorsPortalBackground{
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    position: absolute;
+    
+  
+}
+
+.leftSideBar{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-style: oblique;
+position: fixed;
+border-right: 1px rgba(45, 97, 84, 0.14) solid;
+width: 250px;
+height: 100%;
+color: black;
+background-color: #C1efff;
+z-index: 1;
+}
+.leftNavBarLinks{
+    text-decoration: none;
+    color: black;
+    width: 100%;
+    height: 100%;
+    margin-left: 10px;
+    
+   
+}
+.leftNavBarLinks:hover{
+    
+    color:rgb(103, 143, 133) ;
+}
+.dashboardUser{
+    width: 96%;
+    display: flex;
+    align-items: center;
+    border-radius: 7px;
+    /* height: 59px; */
+    padding: 9px;
+    margin-bottom: 50px;
+    margin-right: 666px;
+    color: white;
+    cursor: pointer;
+    background-color: #0d6dfdfc;
+}
+.vendorAvatar{
+    /* border: 2px white solid ; */
+    border-radius: 50%;
+    width: 20px;
+    padding: 10px;
+    font-size: 20px;
+    color: white;
+    margin-right: 5px ;
+    text-align: center;  
+    background-color: #0d6dfda3; 
+}
+.vendorsMain{
+    position: absolute;
+    left: 250px;
+    right: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+    
+}
+.vendorsMainTab{
+    
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+.vendorsMainTabItems{
+    width: 300px;
+    background-color: white;
+    padding: 50px;
+    margin-top: 150px;
+    display: flex;
+    flex-direction: column;
+   
+   
+}
+.vendorsMainTabItem{
+    width: 100%;
+}
+.dashboardAbove{
+       display: flex;
+       margin-top: 51px;
+       flex-wrap: wrap;
+       justify-content: space-around;
+       width: 100%;
+}
+
+.dashboardAboveComponent{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 17vw;
+    height: 17vw;
+    min-width: 171px;
+    min-height: 171px;
+    max-width: 311px;
+    max-height: 311px;
+    padding: 15px ;
+    align-self: center;
+    color: #0264b9;
+    background-color: #C1efff;
+    margin-bottom: 19px;
+    border-radius: 5px;
+  
+    
+}
+.dashboardAboveComponent>div{
+    display: flex;
+    flex-direction: column;
+}
+.dashboardAboveComponentIcon{
+    background-color: #024bb91e;
+    padding: 15px ;
+    border-radius: 51%;
+    height: 35px;
+    width: 35px;
+}
+
+.searchBar{
+    
+    border: 6px #0d6dfdfa solid ;
+    border-radius: 20px;
+    color: #0d6dfdfa;
+    margin-bottom:51px ;
+    margin-top: 55px;
+    width: 261px;
+}
+.searchBar>input{
+    border: none;
+    border-radius: 20px;
+}
+
+
+/* Right side bar */
+
+.rightSideBar{
+    position: fixed;
+    top: 11px;
+    right: 0;
+margin-top: 50px;
+margin-left: auto;
+width: 250px;
+height: 100%;
+display: flex;
+flex-direction: column;
+border-left: 1px rgba(54, 85, 77, 0.058) solid;
+border-top: 1px rgba(54, 85, 77, 0.058) solid;
+border-radius: 5px;
+background-color: #0d6dfd08;
+}
+
+.createListing{
+display: flex;
+flex-direction: column;
+width: 200px;
+background-color: #0d6dfd1c;
+padding: 20px;
+height: fit-content;
+border-radius: 5px;
+margin-top: 21px;
+margin-bottom: 19px;
+align-self: center;
+}
+.createListing>input{
+    margin-bottom: 10px;
+}
+
+input[type="text"],input[type="number"]{
+    border: none;
+    border-bottom: 1px black solid;
+}
+
+label[for="image"]{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+.numberOfListings{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 200px;
+    height: 200px;
+    align-self: center;
+    color: #024bb9;
+    background-color: #0d6dfd1c;
+    border-radius: 5px;
+
+}
+.numberOfListings>div{
+    display: flex;
+    flex-direction: column;
+}
+.numberOfListingsIcon{
+    background-color: #024bb91e;
+    padding: 15px ;
+    border-radius: 51%;
+    height: 35px;
+    width: 35px;
+
+
+}
+
+.vendorsAbove{
+
+}
+
+.listingComponent{
+    text-align: center;
+    line-height: 20px;
+    width: 150px;
+    background-color: white;
+    height: 250px;
+    margin: 10px;
+    border: 1px rgba(17, 4, 4, 0.071) solid;
+    border-radius: 5px;
+}
+.listingComponent>img{
+    height: 150px;
+    width: 100%;
+    object-fit:cover;
+}
+.listingComponent>span{
+    text-align: center;
+    
+}
+.searchFilterContainer{
+    display: flex;
+    justify-content: center;
+    margin-top: 55px;
+    background-color: white;
+    justify-content: center;
+    height: 100%;
+    width: 351px;
+    max-width: 79%;
+    background-color: white;
+    position: fixed;
+    right: 0;
+    z-index: 2;
+    box-shadow: -2px -2px rgba(0, 0, 0, 0.078);
+}
+.searchFilter{
+    width: 79%;
+    display: flex;
+    flex-direction: column;
+}
+input[type=date]{
+    display: block;
+    margin-top: 10px;
+    color: white;
+    background-color: #0d6dfdfa;
+    border: none;
+    border-radius: 4px;
+    margin-left: 33px;
+    padding: 11px;
+}
+.searchFilter>strong{
+    width: 80%;
+    height: 32px; 
+}
+.searchFilterPrice>input{
+    display: block;
+    border: 1px black solid;
+    margin-left: 33px;
+}
+
+
+
+/* profile */
+.vendorProfileBackground{
+    background-image: url("./wave.svg");
+    background-repeat: no-repeat;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding:21px
+      
+}
+.vendorProfile{
+    padding: 35px;
+    display: flex;
+    width: fit-content;
+    
+    margin-left: 211px;
+    background-color: #607ba32c;
+}
+.vendorContact{
+    width: 311px;
+    background-color: #fffffffa;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    margin-right: 22px;
+    height: 511px;
+}
+.vendorContact>Img{
+    width: 311px;
+    min-width: 311px;
+    height: 311px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+.vDetails{
+    width: 211px;
+    margin-bottom: 11px;
+    text-align: center;
+    
+}
+.vDetails>span{
+    display: block;
+    text-align: start;
+    padding: 2px;
+    border-bottom: 1px rgba(0, 0, 0, 0.113) solid;
+}
+
+
+/* vendors account setup */
+.VendorsLoginForm{
+    width: 100%;
+    display: flex;
+    margin-top: 150px;
+    
+}
+.VendorsLoginFormContainer{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    background-color: rgba(12, 108, 253, 0.082);
+    padding: 30px;
+}
+.VendorsLoginFormContainer>input{
+    border-top: none;
+    border-left:none ;
+    border-right: none;
+    
+}
+.loginItem{
+    margin-bottom: 20px;
+}
+.VendorsLoginFormContainer>h4{
+    text-align: center;
+}
+.loginUser{
+    border: 2px #0d6efd solid ;
+    border-radius: 50%;
+    width: 50px;
+    padding: 20px;
+    /* padding-bottom: 0; */
+    font-size: 50px;
+    color: #0d6efd;
+    margin: auto;
+    margin-bottom: 30px;
+}
+.loggedBtn{
+    background-color: green;
+    color:white;
+    padding: 7px;
+    border-radius: 4px;
+    outline: none;
+    animation-name: logged;
+    animation-duration: 2s;
+}
+@keyframes logged {
+    0%{background-color: #0d6efd;
+        width: 5%;
+    }
+    50%{background-color: green;
+        width: 100%;
+    }
+}
+span{
+    text-align: center;
+}
+
+@media only screen and (max-width:800px){
+    .ordersItemsHeading{
+        width: 100%;
+    }
+    .ordersItems{
+        width: 100%;
+    }
+}
+
+
+
+@media only screen and (max-width:500px){
+    .cartImage{
+        width: 50%;
+        height: 50%;
+    }
+    .orderComponent{
+        font-size: 10px;
+    }
+    .ordersItems>tr>th{
+        font-size: 11px;
+    }
+}

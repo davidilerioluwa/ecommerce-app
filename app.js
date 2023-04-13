@@ -44,7 +44,7 @@ app.use(bodyParser.urlencoded({extended:true}))
 app.use(bodyParser.json())
 
 app.use(Session({
-    secret: "helloworld",
+    secret: process.env.secret,
     resave: true,
     saveUninitialized: true,
    

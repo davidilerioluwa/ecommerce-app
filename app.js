@@ -121,7 +121,7 @@ require("./passportConfig.js")(passport)
 
 // set up database
 
-mongoose.connect("mongodb+srv://davidilerioluwa:ilerioluwa@cluster0.iheez.mongodb.net/shoppingDB", {useNewUrlParser:true})
+mongoose.connect(process.env.db, {useNewUrlParser:true})
 
 
 
